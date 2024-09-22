@@ -1,14 +1,22 @@
-import React from "react";
-import { Text, View } from "react-native";
+import { Text, View, Image } from "react-native"
+import styles from './styles'
 
-export default TelaSobreMim = () => {
+const TelaSobreMim = () => {
     return (
-        <View style={{gap: 10, display: "flex", alignItems: 'center', justifyContent: 'center', height: "100%", width: "80%", alignSelf: 'center'}}>
-            <Text style={{fontSize: 18, fontWeight: "bold"}}>Daniel Alexandre Schmitz</Text>
-            <Text>Idade: 18 anos</Text>
-            <Text style={{textAlign: 'center'}}>Olá, meu nome é Daniel, mas geralmente as pessoas me chamam de Dan. Gosto bastante de computadores, principalmente programação de baixo nível.</Text>
-            <Text style={{textAlign: 'center'}}>Além disso, participo do torneio F1 in Schools pela equipe Interlagos. E, claro, acompanho a Fórmula 1.</Text>
+        <View style={styles.container}>
+            <Image
+                style={styles.icon}
+                source={{
+                    uri: 'https://i.pinimg.com/564x/1d/e4/ef/1de4efd3857649e6303c42f54af7edd9.jpg',
+                }}
+            />
+            <Text style={[{paddingHorizontal: 20}, styles.text]}> <Text style={styles.decoratedText}>Nome:</Text> Gabriel de Oliveira Sebrão</Text>
+            <Text style={[{paddingHorizontal: 20}, styles.text]}> <Text style={styles.decoratedText}>Apelido:</Text> Gab</Text>
+            <Text style={[{paddingHorizontal: 20}, styles.text]}> <Text style={styles.decoratedText}>Idade:</Text> 17 anos</Text>
+            <Text style={[{padding: 20}, styles.text]}> <Text style={styles.decoratedText}>Gostos:</Text> ouvir música, ler, assisitr a videos e lives, jogar com os amigos...</Text>
+            <Text style={[{paddingHorizontal: 20}, styles.text]}> <Text style={styles.decoratedText}>Habilidades:</Text> Android Studio, Kotlin, C++, Java, Python, Inglês Avançado</Text>
         </View>
-
     )
 }
+
+export default TelaSobreMim
